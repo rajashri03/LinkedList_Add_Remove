@@ -61,7 +61,7 @@ namespace LinkedList_Add_Remove
                 Console.Write(tempnode.data + " ");
                 tempnode = tempnode.next;
             }
-            
+            Console.WriteLine();
         }
     }
 }
