@@ -43,25 +43,38 @@ namespace LinkedList_Add_Remove
                 tail = newNode;
             }
         }
+        //Add() will add a new node to the Start of the list  
+        public void Add_Start(linked data)
+        {
+            //Create a new node  
+            AddNode<linked> newNode = new AddNode<linked>(data);
+
+            newNode.data = data;
+            newNode.next = head;
+            head = newNode;
+        }
         //display() will display all the data i.e presetn in list
-        public void display()
+       public void display()
         {
             //Node current will point to head  
             AddNode<linked> tempnode = head;
-            if (head == null)
+            if (tempnode != null)
             {
-                Console.WriteLine("List is empty");
-                return;
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("List Contains: ");
+                Console.ResetColor();
+                while (tempnode != null)
+                {
+                    Console.Write(tempnode.data + " ");
+                    tempnode = tempnode.next;
+                }
             }
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("List Contains: ");
-            Console.ResetColor();
-            while (tempnode != null)
+            else
             {
-                Console.Write(tempnode.data + " ");
-                tempnode = tempnode.next;
+                Console.Write("List is Empty");
             }
-            Console.WriteLine();
+           
+            Console.WriteLine("\n");
         }
     }
 }
