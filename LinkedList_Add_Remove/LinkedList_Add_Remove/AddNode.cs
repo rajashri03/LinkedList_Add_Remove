@@ -16,7 +16,6 @@ namespace LinkedList_Add_Remove
             next = null;
         }
     }
-
     public class AddLinkedList<linked>
     {
         //Represent the head and tail of the  linked list  
@@ -44,19 +43,19 @@ namespace LinkedList_Add_Remove
                 tail = newNode;
             }
         }
-
         //display() will display all the data i.e presetn in list
         public void display()
         {
             //Node current will point to head  
             AddNode<linked> tempnode = head;
-
             if (head == null)
             {
                 Console.WriteLine("List is empty");
                 return;
             }
-            Console.WriteLine("List Conatins: ");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("List Contains: ");
+            Console.ResetColor();
             while (tempnode != null)
             {
                 Console.Write(tempnode.data + " ");
